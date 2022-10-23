@@ -108,7 +108,7 @@
                       let wei = parseInt(result,16);
                       let balance = wei / (10**18);
                       console.log(balance + " ETH");
-                      button.textContent = balance;
+                      button.textContent = balance.toFixed(3);
                     });
                   });
                 });
