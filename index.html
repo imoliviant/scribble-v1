@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>scribble</title>
+<meta charset="UTF-8">
+<meta name="description" content="a slowsly website for minting scribbles :)">
+<meta name="web" content="">
+<meta name="author" content="imoliviant">
+<link rel="icon" type="image/ico" sizes="32x32" href="">
+<link rel="shortcut icon" href="imgs/scribble.png" type="image/x-icon">
+<link rel="icon" href="imgs/scribble.png" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js" integrity="sha256-1TLx50r3wQ52OlAm5jSfpTwbN9MJ51NysfLmsXmUPDk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-----------Ratings---------------->
+    <section id="ratings">
+        <!--------Headings----------->
+        <div class="ratings-headings">
+            <a href="" target="_blank">
+                <h1 class="headings">
+                    <span class="text-wrapper">
+                        <span class="letters"></span>
+                    </span>
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                </h1>
+            </a>
+        </div>
+
+        <!-----ratings-box-container----->
+        <div class="ratings-box-container">
+            <!---- BOX 1 ---->
+            <div class="ratings-box">
+                <!---- TOP ---->
+                <div class="box-top">
+                    <!---- PROFILE ---->
+                    <div class="profile">
+                        <!---- IMG ---->
+                        <div class="profile-img">
+                            <img src="imgs/scribble.png">
+                        </div>
+                        <!---- NAME & USERNAME ---->
+                        <div class="name-user">
+                            <strong>Scribbles Mint</strong>
+                            <span>@ethwscribble</span>
+                        </div>
+                    </div>
+                    <!---- REVIEWS ---->
+                    <div class="reviews">
+                        <a href=""><i class='bx bxl-chrome'></i></a>
+                        <a href="https://t.me/dogescribbles" target="_blank"><i class='bx bxl-telegram'></i></a>
+                        <a href="#"><i class='bx bx-line-chart'></i></a>
+                    </div>
+                </div>
+                <!---- COMMENTS ---->
+                <div class="special-comment">
+                    <p>Scribbles:<br>Mint Price- 0.45 ETHw<br>Total Supply- 800<br>You Can Mint- 10 Scribbles at a time
+                    </p><br>
+                    <input id="amount1" type="number" size="10" placeholder="amount" min="1"><br>
+                    <button onclick="mintScribble()" class="button button1">Mint</button><br><br>
+                    <div id="lang1"></div>
+                    <button onclick="supply()" class="button button1">Check current supply</button>
+                    <p></p>
+                    <div id="lang2"></div> / 800<br>
+                </div>
+            </div>
+        </div>
+        <!---- BOX 2 ---->
+        <div class="ratings-box">
+            <!---- TOP ---->
+            <div class="box-top">
+                <!---- PROFILE ---->
+                <div class="profile">
+                    <!---- IMG ---->
+                    <div class="profile-img">
+                        <img src="imgs/scribb.gif">
+                    </div>
+                    <!---- NAME & USERNAME ---->
+                    <div class="name-user">
+                        <strong>Scribble Wallet</strong>
+                        <span>@ethwscribble</span>
+                    </div>
+                </div>
+                <!---- REVIEWS ---->
+                <div class="reviews">
+                    <a href=""><i class='bx bxl-chrome'></i></a>
+                    <a href="https://t.me/ethwscribble" target="_blank"><i class='bx bxl-telegram'></i></a>
+                </div>
+            </div>
+            <!---- COMMENTS ---->
+            <div class="special-comment">
+              <p>You can connect wallet with metamask and continue your journey!:)</p><br>
+              
+              <button id="connect-button" class="button button1">Connect Metamask</button>
+              <script>
+                document.getElementById('connect-button').addEventListener('click', event => {
+                  let account;
+                  let button = event.target;
+                  ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+                    account = accounts[0];
+                    console.log(account);
+                    
+                    ethereum.request({method: 'eth_getBalance', params: [account, 'latest']}).then(result => {
+                      console.log(result);
+                      let wei = parseInt(result,16);
+                      let balance = wei / (10**18);
+                      console.log(balance + " ETH");
+                      button.textContent = balance;
+                    });
+                  });
+                });
+              </script>
+            </div>
+        </div>
+    </section>
+    
+<!-- <script>
+    web3 = new Web3(window.ethereum);
+    ethereum.request({ method: 'eth_requestAccounts' });
+    var scribbleChef;
+    const getAccount = async () => {
+    try {
+    //const myAccounts = await web3.eth.getAccounts();
+    const myAccounts = await ethereum.request({ method: 'eth_accounts' });
+    scribbleChef = myAccounts[0];
+    console.log("Master account" + scribbleChef);
+    return myAccounts[0];
+    } catch (err) {
+          console.log(err);
+    }
+    }
+    //getAccount();
+    //web3.eth.defaultAccount = web3.eth.accounts[0];
+    getAccount();
+    ethereum.request({ method: 'eth_accounts' }).defaultAccount = ethereum.request({ method: 'eth_accounts' }).accounts[0];
+  </script> -->
+  
+  <script src="functions.js"></script>
+  <script src="contractDoodle.js"></script>
+  <script src="contractWDOGE.js"></script>
+  <script src="contractScribble.js"></script>
+
+</body>
+</html>
