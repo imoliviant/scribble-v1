@@ -126,6 +126,7 @@ img{
 .name-user span {
   color: #979797;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .reviews {
@@ -159,6 +160,7 @@ input{
 button{
   font-size: 1.5rem;
   text-align: center;
+  cursor: pointer;
 }
 
 i {
@@ -203,8 +205,8 @@ button:hover{
   font-size: 2rem;
   font-style: italic;
 }
-#lang1 {
+#scrib1 {
  font-size: 1.36rem;
- font-family: monospace;
+ font-family: 'Balsamiq Sans', monospace;
  font-style: italic;
 }
