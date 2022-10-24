@@ -63,6 +63,7 @@ a {
   padding: 20px;
   margin: 15px;
   border-radius: 10px;
+  overflow: auto;
 }
 
 .special-ratings-box:hover {
