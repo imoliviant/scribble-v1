@@ -98,6 +98,7 @@ img{
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
+  box-shadow: 2px 2px 30px black;
 }
 
 .profile-img img {
@@ -105,6 +106,7 @@ img{
   height: 100%;
   object-fit: cover;
   object-position: center;
+  box-shadow: 2px 2px 30px black;
 }
 
 .profile {
