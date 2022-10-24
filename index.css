@@ -62,7 +62,6 @@ a {
   background: linear-gradient(45deg, yellow, lightblue);
   padding: 20px;
   margin: 15px;
-  cursor: pointer;
   border-radius: 10px;
 }
 
@@ -76,7 +75,6 @@ a {
   background: linear-gradient(45deg, yellow, aqua);
   padding: 20px;
   margin: 15px;
-  cursor: pointer;
   text-align: center;
 }
 
@@ -195,6 +193,8 @@ button{
   box-shadow: 0px 1px 0px black;
   font-style: bold;
   font-size: 1.5rem;
+  border-radius: 1.1rem;
+  cursor: pointer;
 }
 button:hover{
   background: linear-gradient(0deg, yellow, aqua);
