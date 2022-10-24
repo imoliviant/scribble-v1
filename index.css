@@ -54,6 +54,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  overflow: auto;
 }
 
 .special-ratings-box {
@@ -77,6 +78,7 @@ a {
   padding: 20px;
   margin: 15px;
   text-align: center;
+  overflow: auto;
 }
 
 .ratings-box:hover {
