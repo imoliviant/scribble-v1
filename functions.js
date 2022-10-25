@@ -25,3 +25,22 @@ function supplyMinted() {
     $("#scrib2").html(content);
     });
 };
+
+// sync wallet
+function wallet() {
+    var content = "";
+    var event = contractScribble.methods.balanceOf(scribbleChef).call({ from: scribbleChef })
+        .then(function (result) {
+            balance = result;
+            for(var i = 0; i < balance: i++){
+                var event = contractScribble.methods.tokenOfOwnerByIndex(scribbleChef, i).call({ from: scribbleChef })
+                .then(function (result) {
+                    var event = contractScribble.methods.tokenURI(Number(result)).call()
+                    .then(function (result) {
+                        content += "<img src="+result+".png width=150 height=150>" + "<br><br>Id: " + result;
+                        $("#scrib3").html(content);
+                    });
+                });
+            });
+        });
+};
