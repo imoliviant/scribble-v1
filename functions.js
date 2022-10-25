@@ -1,4 +1,4 @@
-// mint scribbles
+// Mint
 function mintScribble() {
     var amount1 = $("#amount1").val();
     var content = "Sending transaction from: ";
@@ -12,9 +12,8 @@ function mintScribble() {
     content += JSON.stringify(receipt.transactionHash);
     $("#scrib1").html(content);
         });;
-};
+  };
 
-// minted scribbles
 function supply() {
     var content = "";
     var event = contractScribble.methods.totalSupply().call({ from: scribbleChef })
@@ -26,21 +25,21 @@ function supply() {
     });
 };
 
-// sync wallet
+// Wallet
 function wallet() {
     var content = "";
-    var event = contractScribble.methods.balanceOf(scribbleChef).call({ from: scribbleChef })
+        var event = contractScribble.methods.balanceOf(scribbleChef).call({ from: scribbleChef })
         .then(function (result) {
-            balance = result;
-            for(var i = 0; i < balance: i++){
-                var event = contractScribble.methods.tokenOfOwnerByIndex(scribbleChef, i).call({ from: scribbleChef })
-                .then(function (result) {
-                    var event = contractScribble.methods.tokenURI(Number(result)).call()
-                    .then(function (result) {
-                        content += "<img src="+result+".png width=150 height=150>" + "<br><br>Id: " + result;
-                        $("#scrib3").html(content);
-                    });
-                });
-            });
-        });
+    balance = result;
+    for(var i = 0; i < balance; i++){
+    var event = contractScribble.methods.tokenOfOwnerByIndex(scribbleChef, i).call({ from: scribbleChef })
+        .then(function (result) {
+    var event = contractScribble.methods.tokenURI(Number(result)).call()
+        .then(function (result1) {
+    content += "<img src=https://dogescribble.netlify.app/scribbles/nfts/"+result+".png width=150 height=150>" + "<br><br>Id: " + result;
+    $("#scrib3").html(content);
+    });
+    });
+    };
+    });
 };
