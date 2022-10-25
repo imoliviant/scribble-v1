@@ -4,7 +4,7 @@ function mintScribble() {
     var content = "Sending transaction from: ";
     content += scribbleChef;
     $("#scrib1").html(content);
-    var event = contractScribble.methods.batchMint(scribbleChef, amount1).send({ from: scribbleChef, value: 25000000000000000000 * amount1 })
+    var event = contractScribble.methods.mint(scribbleChef, amount1).send({ from: scribbleChef, value: 1000000000000000000 * amount1 })
         .then(function (receipt) {
             console.log(receipt);
     var content = "Transaction sent!: ";
