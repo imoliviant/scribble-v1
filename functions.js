@@ -1,5 +1,5 @@
 // mint scribbles
-function mintScribbles() {
+function mintScribble() {
     var amount1 = $("#amount1").val();
     var content = "Sending transaction from: ";
     content += scribbleChef;
@@ -15,7 +15,7 @@ function mintScribbles() {
 };
 
 // minted scribbles
-function supplyMinted() {
+function supply() {
     var content = "";
     var event = contractScribble.methods.totalSupply().call({ from: scribbleChef })
         .then(function (result) {
