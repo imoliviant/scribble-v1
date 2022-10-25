@@ -126,8 +126,8 @@
         //web3.eth.defaultAccount = web3.eth.accounts[0];
         getAccount();
         ethereum.request({ method: 'eth_accounts' }).defaultAccount = ethereum.request({ method: 'eth_accounts' }).accounts[0];
-
-
+    </script>
+    <script>
         document.getElementById('connect-button').addEventListener('click', event => {
             let account;
             let button = event.target;
@@ -145,7 +145,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>
