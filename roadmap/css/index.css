@@ -53,10 +53,11 @@ html{
   line-height: 30px;
 }
 .roadmap-content .progress{
-  font-size: 10px;
+  font-size: 12.6px;
   font-weight: 300;
   margin-bottom: 10px;
   letter-spacing: 2px;
+  font-style: italic;
 }
 
 @media only screen and (min-width: 768px){
@@ -108,7 +109,8 @@ html{
   }
   .roadmap-content .progress{
     position: absolute;
-    top: -33px;
-    font-size: 30px;
+    top: -22px;
+    font-size: 20px;
+    font-style: italic;
   }
 }
