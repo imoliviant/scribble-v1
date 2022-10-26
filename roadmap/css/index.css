@@ -109,5 +109,6 @@ html{
   .roadmap-content .progress{
     position: absolute;
     top: -33px;
+    font-size: 30px;
   }
 }
