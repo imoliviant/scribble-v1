@@ -87,7 +87,7 @@ a {
 .ratings-box:hover {
   box-shadow: 2px 2px 30px black;
   border-radius: 10px;
-  background: linear-gradient(0deg, aqua, mediumpurple);
+  background: linear-gradient(0deg, mediumpurple, aqua);
 }
 
 img{
