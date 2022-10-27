@@ -67,7 +67,7 @@ html{
 } */
 
 .roadmap ul li:hover{
-  box-shadow: 0px 2px 10px grey;
+ /* box-shadow: 0px 2px 10px grey; */
   cursor: default;
   color: whitesmoke;
   text-shadow: 1px 0px 5px black;
@@ -126,5 +126,12 @@ html{
     top: -22px;
     font-size: 20px;
     font-style: italic;
+  }
+  .roadmap ul li:hover{
+  box-shadow: 0px 2px 10px grey;
+  cursor: default;
+  color: whitesmoke;
+  text-shadow: 1px 0px 5px black;
+  background: linear-gradient(to left, mediumpurple, aqua);
   }
 }
