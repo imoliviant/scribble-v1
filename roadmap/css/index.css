@@ -152,6 +152,7 @@ html{
     width: 64px;
     height: 64px;
     border-radius: 8px;
-    display: initial;
+    display: none; /* was initial before */
+    overflow: hidden;
   }
 }
