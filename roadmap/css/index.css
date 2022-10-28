@@ -60,14 +60,14 @@ html{
   font-style: italic;
 }
 
-.roadmap-content .done:hover{
+/* .roadmap-content .done:hover{
   font-size: 12.6px;
   font-weight: 300;
   margin-bottom: 10px;
   letter-spacing: 2px;
   font-style: italic;
   color: green;
-}
+} */
 /* .roadmap ul li:hover{
   box-shadow: 0px 2px 10px grey;
   cursor: default;
