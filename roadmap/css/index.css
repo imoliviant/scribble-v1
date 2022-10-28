@@ -60,6 +60,11 @@ html{
   font-style: italic;
 }
 
+.roadmap-content img{
+  width: 32px;
+  height: 32px;
+}
+
 /* .roadmap-content .done:hover{
   font-size: 12.6px;
   font-weight: 300;
@@ -142,4 +147,8 @@ html{
   text-shadow: 1px 0px 5px black;
   background: linear-gradient(to left, mediumpurple, aqua);
   }
+  .roadmap-content img{
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
 }
