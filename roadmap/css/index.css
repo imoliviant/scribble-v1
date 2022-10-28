@@ -63,6 +63,7 @@ html{
 .roadmap-content img{
   width: 1px;
   height: 1px;
+  display: none;
 }
 
 /* .roadmap-content .done:hover{
