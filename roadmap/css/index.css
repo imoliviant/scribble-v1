@@ -60,7 +60,7 @@ html{
   font-style: italic;
 }
 
-.roadmap-content .progress .done:hover{
+.roadmap-content .done:hover{
   font-size: 12.6px;
   font-weight: 300;
   margin-bottom: 10px;
