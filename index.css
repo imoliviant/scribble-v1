@@ -8,9 +8,11 @@
   padding: 0px;
   font-family: 'Balsamiq Sans', Monospace;
   box-sizing: border-box;
+  display: initial;
 }
 body{
   background: linear-gradient(to right, #36d1dc, #5b86e5) no-repeat;
+  display: none;
 }
 
 a {
