@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
 body{
   font-family: 'Coming Soon', monospace !important;
-  background: linear-gradient(45deg, mediumpurple, aqua) !important;
+  background: linear-gradient(to left, mediumpurple, aqua) !important;
 }
 .container{
   padding-top: 150px;
