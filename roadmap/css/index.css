@@ -151,8 +151,8 @@ html{
   .roadmap-content img{
     width: 64px;
     height: 64px;
-    border-radius: 8px;
-    display: none; /* was initial before */
+    border-radius: 20px;
+    display: initial; /* was initial before */
     overflow: hidden;
   }
 }
