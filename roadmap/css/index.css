@@ -151,8 +151,12 @@ html{
   .roadmap-content img{
     width: 64px;
     height: 64px;
-    border-radius: 20px;
+    border-radius: 23px;
     display: initial; /* was initial before */
     overflow: hidden;
+    opacity: 0.3;
+  }
+ .roadmap-content img:hover{
+    opacity: 0.7;
   }
 }
