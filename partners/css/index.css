@@ -19,7 +19,7 @@ h2{
 
 .slick-slide img {
    height: 150px;
-    width: 150px;
+    width: 100%;
 }
 
 .slick-slider
