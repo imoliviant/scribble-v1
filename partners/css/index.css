@@ -53,6 +53,7 @@ h2{
 .slick-slide img
 {
     display: block;
+    cursor: pointer;
 }
 
 /* .slick-slide img:hover{
