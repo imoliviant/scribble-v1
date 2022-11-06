@@ -9,7 +9,22 @@ var contractScribble = new web3.eth.Contract(
 			},
 			{
 				"internalType": "uint256",
+				"name": "_maxSupply",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
 				"name": "_mintPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "initialRoyaltiesReceiver",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_royaltiesPercentage",
 				"type": "uint256"
 			}
 		],
@@ -87,12 +102,17 @@ var contractScribble = new web3.eth.Contract(
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
 				"internalType": "uint256",
-				"name": "quantity",
+				"name": "number",
 				"type": "uint256"
 			}
 		],
-		"name": "mint",
+		"name": "batchMint",
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
@@ -140,6 +160,25 @@ var contractScribble = new web3.eth.Contract(
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "safeMint",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "from",
 				"type": "address"
 			},
@@ -178,7 +217,7 @@ var contractScribble = new web3.eth.Contract(
 			},
 			{
 				"internalType": "bytes",
-				"name": "_data",
+				"name": "data",
 				"type": "bytes"
 			}
 		],
@@ -214,6 +253,32 @@ var contractScribble = new web3.eth.Contract(
 			}
 		],
 		"name": "setNewURI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_newRoyaltiesPercentage",
+				"type": "uint256"
+			}
+		],
+		"name": "setRoyaltiesPercentage",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newRoyaltiesReceiver",
+				"type": "address"
+			}
+		],
+		"name": "setRoyaltiesReceiver",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -287,7 +352,7 @@ var contractScribble = new web3.eth.Contract(
 				"type": "address"
 			}
 		],
-		"name": "withdrawFunds",
+		"name": "transferValue",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -426,6 +491,66 @@ var contractScribble = new web3.eth.Contract(
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "royaltiesPercentage",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "royaltiesReceiver",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_tokenId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_salePrice",
+				"type": "uint256"
+			}
+		],
+		"name": "royaltyInfo",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "token",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "receiver",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "royaltyAmount",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "bytes4",
@@ -452,6 +577,49 @@ var contractScribble = new web3.eth.Contract(
 				"internalType": "string",
 				"name": "",
 				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenOfOwnerByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
