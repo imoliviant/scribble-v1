@@ -502,4 +502,4 @@ var contractScribble = new web3.eth.Contract(
 		"stateMutability": "view",
 		"type": "function"
 	}
-], "0xa69551bd46e1f8E2229e3955309Cd15E48eb746d");
+], "0x06c3CC4A01aD92bA8f57b0Edd4Ea229fb093BC07");
