@@ -128,6 +128,19 @@ var contractScribble = new web3.eth.Contract(
 	{
 		"inputs": [
 			{
+				"internalType": "uint256",
+				"name": "reserved",
+				"type": "uint256"
+			}
+		],
+		"name": "reserveMint",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "address",
 				"name": "from",
 				"type": "address"
@@ -465,4 +478,4 @@ var contractScribble = new web3.eth.Contract(
 		"stateMutability": "view",
 		"type": "function"
 	}
-], "0xec0491cD5017D859A3E627a889EEcf11F720fA84");
+], "0x543d473Faaa9d2334c0751AaFad51E59bfe2D679");
