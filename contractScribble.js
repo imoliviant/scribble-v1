@@ -1,11 +1,11 @@
 var contractScribble = new web3.eth.Contract(
-  [
+[
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_initBaseURI",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_mintPrice",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "nonpayable",
@@ -83,25 +83,7 @@ var contractScribble = new web3.eth.Contract(
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_mintAmount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "destination",
-				"type": "address"
-			}
-		],
-		"name": "gift",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_mintAmount",
+				"name": "quantity",
 				"type": "uint256"
 			}
 		],
@@ -130,21 +112,15 @@ var contractScribble = new web3.eth.Contract(
 		"type": "event"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
-			}
-		],
-		"name": "pause",
+		"inputs": [],
+		"name": "renounceOwnership",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "renounceOwnership",
+		"name": "reserve",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -191,7 +167,7 @@ var contractScribble = new web3.eth.Contract(
 			},
 			{
 				"internalType": "bytes",
-				"name": "data",
+				"name": "_data",
 				"type": "bytes"
 			}
 		],
@@ -214,71 +190,6 @@ var contractScribble = new web3.eth.Contract(
 			}
 		],
 		"name": "setApprovalForAll",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseExtension",
-				"type": "string"
-			}
-		],
-		"name": "setBaseExtension",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseURI",
-				"type": "string"
-			}
-		],
-		"name": "setBaseURI",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_newCost",
-				"type": "uint256"
-			}
-		],
-		"name": "setCost",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_newmaxMintAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "setmaxMintAmount",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_limit",
-				"type": "uint256"
-			}
-		],
-		"name": "setNftPerAddressLimit",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -345,32 +256,6 @@ var contractScribble = new web3.eth.Contract(
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "withdraw",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "addressMintedBalance",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -379,45 +264,6 @@ var contractScribble = new web3.eth.Contract(
 			}
 		],
 		"name": "balanceOf",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseExtension",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseURI",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "cost",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -473,7 +319,7 @@ var contractScribble = new web3.eth.Contract(
 	},
 	{
 		"inputs": [],
-		"name": "maxMintAmount",
+		"name": "maxSupply",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -486,7 +332,7 @@ var contractScribble = new web3.eth.Contract(
 	},
 	{
 		"inputs": [],
-		"name": "maxSupply",
+		"name": "mintPrice",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -505,19 +351,6 @@ var contractScribble = new web3.eth.Contract(
 				"internalType": "string",
 				"name": "",
 				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "nftPerAddressLimit",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -550,19 +383,6 @@ var contractScribble = new web3.eth.Contract(
 				"internalType": "address",
 				"name": "",
 				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "paused",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
 			}
 		],
 		"stateMutability": "view",
@@ -604,49 +424,6 @@ var contractScribble = new web3.eth.Contract(
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "index",
-				"type": "uint256"
-			}
-		],
-		"name": "tokenByIndex",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "index",
-				"type": "uint256"
-			}
-		],
-		"name": "tokenOfOwnerByIndex",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
 				"name": "tokenId",
 				"type": "uint256"
 			}
@@ -676,22 +453,16 @@ var contractScribble = new web3.eth.Contract(
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_owner",
-				"type": "address"
-			}
-		],
-		"name": "walletOfOwner",
+		"inputs": [],
+		"name": "uri",
 		"outputs": [
 			{
-				"internalType": "uint256[]",
+				"internalType": "string",
 				"name": "",
-				"type": "uint256[]"
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",
 		"type": "function"
 	}
-], "0x76466AAA593E3af9B0D98f6838a22DA89E4072E5");
+], "0xec0491cD5017D859A3E627a889EEcf11F720fA84");
